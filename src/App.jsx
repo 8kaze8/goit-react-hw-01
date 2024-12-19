@@ -1,6 +1,6 @@
-import Profile from "./components/Profile/Profile";
-import FriendList from "./components/FriendList/FriendList";
-import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
+import Profile from "./components/profile/Profile";
+import FriendList from "./components/friendList/FriendList";
+import TransactionHistory from "./components/transactionHistory/TransactionHistory";
 
 import userData from "./data/userData.json";
 import friends from "./data/friends.json";
@@ -8,7 +8,7 @@ import transactions from "./data/transactions.json";
 
 const App = () => {
   return (
-    <div>
+    <div className="app-container">
       <Profile
         name={userData.username}
         tag={userData.tag}

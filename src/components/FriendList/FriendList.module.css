@@ -1,41 +1,58 @@
 .friendList {
+  display: flex;
+  justify-content: space-between;
+  width: 300px; /* Match the width defined in Profile.module.css */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f6f9;
   list-style: none;
-  padding: 0;
 }
 
 .item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: 20px; /* Increase padding for larger items */
   border: 1px solid #e4e9f0;
   border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 70px; /* Increase width for larger items */
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .avatar {
-  margin-right: 10px;
-  width: 48px;
-  height: 48px;
+  width: 60px; /* Increase width for larger avatars */
+  height: 60px; /* Increase height for larger avatars */
   border-radius: 50%;
+  margin-bottom: 5px; /* Decrease margin bottom */
+  object-fit: cover;
 }
 
 .name {
-  font-size: 18px;
+  font-size: 16px; /* Increase font size for larger text */
   font-weight: bold;
+  margin: 3px 0; /* Decrease margin top and bottom */
+  text-align: center;
+}
+
+.online,
+.offline {
+  width: 10px; /* Increase width for larger status indicators */
+  height: 10px; /* Increase height for larger status indicators */
+  border-radius: 50%;
+  margin-top: 3px; /* Decrease margin top */
 }
 
 .online {
-  width: 10px;
-  height: 10px;
   background-color: green;
-  border-radius: 50%;
-  margin-right: 10px;
 }
 
 .offline {
-  width: 10px;
-  height: 10px;
   background-color: red;
-  border-radius: 50%;
-  margin-right: 10px;
 }
